@@ -22,7 +22,7 @@ public class LoadGraphInJCL {
 
         // regerar o principal.jar
 
-        File[] jar = {new File("../JCLGraph/lib/Principal.jar")};
+        File[] jar = {new File("../JCLPageRank-2.0/lib/Principal.jar")};
 
         System.out.println(jcl.register(jar, "LocalStorage"));
 
@@ -45,6 +45,7 @@ public class LoadGraphInJCL {
             manyGraphNeighbors[hostNum].put(key, n);
             for (String v : n.neighbors) {
                 if (graphNeighbors.get(v) != null)
+                    // valor inicial do PageRank 1.0
                     neighborsMap[hostNum].put(v, "1.0:" + graphNeighbors.get(v).edgeOut);
             }
 

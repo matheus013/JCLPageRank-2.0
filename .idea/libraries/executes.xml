@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="executes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/executes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jclUser.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Neighbors.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Principal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/util.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jclUser.jar!/" />
+    </SOURCES>
+  </library>
+</component>

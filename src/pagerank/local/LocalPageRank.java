@@ -31,7 +31,9 @@ public class LocalPageRank {
                     float accumulated_PR = 0;
 
                     for (String neighbor : neighbors) {
+
                         String[] split = localGraphNeighbors.get(neighbor).split(":");
+
                         int links = Integer.parseInt(split[1]);
                         float current_PR = Float.parseFloat(split[0]);
 

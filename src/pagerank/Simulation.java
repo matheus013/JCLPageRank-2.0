@@ -4,19 +4,22 @@ import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
 import interfaces.kernel.JCL_result;
 import pagerank.local.LocalPageRank;
-import util.ReadInput;
+import pagerank.util.ReadInput;
 
 import java.util.List;
 import java.util.concurrent.Future;
 
-import static util.Log.reportPerformanceFor;
+import static pagerank.util.Log.reportPerformanceFor;
 
 
 public class Simulation {
+	
 
 
     public void run(String filename) {
+    	System.out.println("pre_run");
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
+        System.out.println("pos_run");
 
         long time = System.currentTimeMillis();
         reportPerformanceFor("Starting loading from file", time);

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="JCLPageRank-2.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JCLPageRank_2_0_jar</output-path>
+    <root id="root">
+      <element id="archive" name="JCLPageRank-2.0.jar">
+        <element id="module-output" name="JCLPageRank-2.0" />
+      </element>
+      <element id="library" level="project" name="executes" />
+    </root>
+  </artifact>
+</component>
