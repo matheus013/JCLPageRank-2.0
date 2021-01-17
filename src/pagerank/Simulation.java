@@ -13,29 +13,27 @@ import static pagerank.util.Log.reportPerformanceFor;
 
 
 public class Simulation {
-	
 
 
     public void run(String filename) {
-    	System.out.println("pre_run");
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
-        System.out.println("pos_run");
 
         long time = System.currentTimeMillis();
-        reportPerformanceFor("Starting loading from file", time);
 
+        System.out.println("Loading data...");
         LoadGraphInJCL.loadInJcl(ReadInput.readInput(filename));
-        reportPerformanceFor("graph allocation", time);
+        reportPerformanceFor("Loaded data", time);
 
 
         time = System.currentTimeMillis();
-        reportPerformanceFor("Starting PageRank ", time);
+//        reportPerformanceFor("Starting PageRank ", time);
+        System.out.println("Starting PageRank");
 
         List<Future<JCL_result>> tickets;
         jcl.register(LocalPageRank.class, "LocalPageRank");
         jcl.register(RemoteUpdates.class, "RemoteUpdates");
 
-        int iterations = 2;
+        int iterations = 10;
         Object[] args = {iterations};
 
         tickets = jcl.executeAll("LocalPageRank", args);

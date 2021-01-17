@@ -1,4 +1,7 @@
+import implementations.dm_kernel.user.JCL_FacadeImpl;
 import pagerank.Simulation;
+import interfaces.kernel.JCL_facade;
+import interfaces.kernel.JCL_result;
 
 public class Main {
 
@@ -11,7 +14,6 @@ public class Main {
         }
 
         Simulation simulation = new Simulation();
-
         simulation.run(args[0]);
     }
 

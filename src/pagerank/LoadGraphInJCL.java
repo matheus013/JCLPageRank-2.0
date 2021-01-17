@@ -24,7 +24,8 @@ public class LoadGraphInJCL {
 
         File[] jar = {new File("../JCLPageRank-2.0/lib/Principal.jar")};
 
-        System.out.println(jcl.register(jar, "LocalStorage"));
+        System.out.println(jcl.register(jar, "LocalStorage") ?
+                "Registered dependencies." : "Failed to register dependencies");
 
         List<Map.Entry<String, String>> devices = jcl.getDevices();
 
